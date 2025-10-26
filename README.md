@@ -156,6 +156,54 @@ spark-ecommerce-analytics/
    - Distribución de estados en tiempo real
    - Monitoreo de transacciones completadas vs pendientes
 
+## Capturas de Pantalla del Proceso
+
+### 1. Configuración del Entorno
+
+#### Actualización del Sistema
+![Actualización del Sistema](Toma%20captura%20de%20la%20actualizaci%C3%B3n%20del%20sistema.png)
+
+#### Versiones de Python y pip
+![Versiones de Python y pip](Captura%20las%20versiones%20de%20Python%20y%20pip.png)
+
+#### Clonación del Repositorio
+![Clonación del Repositorio](Toma%20captura%20de%20la%20clonaci%C3%B3n%20exitosa%20del%20repositorio.png)
+
+### 2. Instalación de Dependencias
+
+#### Instalación de Dependencias Python
+![Instalación de Dependencias](Captura%20la%20instalaci%C3%B3n%20exitosa%20de%20las%20dependencias%20Python.png)
+
+#### Verificación de Librerías
+![Verificación de Librerías](Captura%20la%20verificaci%C3%B3n%20de%20las%20librer%C3%ADas%20instaladas.png)
+
+### 3. Configuración de Servicios
+
+#### Servicios Hadoop (jps)
+![Servicios Hadoop](Captura%20la%20salida%20de%20jps%20mostrando%20los%20servicios%20de%20Hadoop.png)
+
+#### Versión de Spark
+![Versión de Spark](Captura%20la%20versi%C3%B3n%20de%20Spark%20instalada.png)
+
+#### Dataset CSV Verificado
+![Dataset CSV](Captura%20la%20verificaci%C3%B3n%20del%20dataset%20CSV.png)
+
+### 4. Configuración de Kafka
+
+#### Descarga y Configuración de Kafka
+![Descarga de Kafka](Captura%20la%20descarga%20%2C%20descompresi%C3%B3n%20y%20configuraci%C3%B3n%20de%20Kafka..png)
+
+#### Inicio de Kafka
+![Inicio de Kafka](Captura%20el%20inicio%20de%20Kafka.png)
+
+#### Creación del Topic
+![Creación del Topic](Captura%20la%20creaci%C3%B3n%20exitosa%20del%20topic.png)
+
+### 5. Estructura del Proyecto
+
+#### Estructura de Directorios
+![Estructura de Directorios](Captura%20la%20estructura%20de%20directorios%20creada.png)
+
 ## Monitoreo y Visualización
 
 ### Interfaz Web de Spark
@@ -204,6 +252,30 @@ spark-submit --driver-memory 2g --executor-memory 2g procesamiento_batch.py
 # Cambiar puerto de la interfaz web
 spark-submit --conf spark.ui.port=4041 procesamiento_batch.py
 ```
+
+## Estado del Proyecto
+
+### ✅ Completado
+
+- [x] **Configuración del entorno**: Actualización del sistema, instalación de dependencias
+- [x] **Dataset generado**: 100,000 transacciones sintéticas de e-commerce
+- [x] **Kafka configurado**: ZooKeeper y Kafka funcionando correctamente
+- [x] **Topic creado**: `transacciones_ventas` listo para streaming
+- [x] **Spark Streaming**: Consumidor funcionando y procesando datos en tiempo real
+- [x] **Documentación**: README completo con capturas de pantalla del proceso
+
+### 🔄 En Progreso
+
+- [ ] **Productor Kafka**: Ejecutándose para enviar transacciones simuladas
+- [ ] **Procesamiento Batch**: Análisis exploratorio de datos completado
+- [ ] **Monitoreo**: Interfaz web de Spark disponible en puerto 4040
+
+### 📊 Resultados Obtenidos
+
+- **Dataset**: 100,000 transacciones procesadas exitosamente
+- **Kafka**: Streaming en tiempo real funcionando
+- **Spark**: Análisis batch y streaming operativos
+- **Capturas**: Documentación completa del proceso de implementación
 
 ## Autor
 
