@@ -53,6 +53,26 @@ El proyecto utiliza un dataset sintético de transacciones de e-commerce que inc
 pip install -r requirements.txt
 ```
 
+## Conexión al Servidor
+
+Antes de comenzar, necesitas conectarte al servidor Hadoop por SSH:
+
+### Windows
+
+```bash
+# Conectarse al servidor Hadoop por SSH
+ssh vboxuser@192.168.0.4
+```
+
+**Nota**: Reemplaza `192.168.0.4` con la IP de tu servidor Hadoop si es diferente.
+
+### Linux/Mac
+
+```bash
+# Conectarse al servidor Hadoop por SSH
+ssh vboxuser@<IP_DEL_SERVIDOR>
+```
+
 ## Instrucciones de Instalación
 
 **Nota**: El servidor Hadoop y Spark ya deben estar preconfigurados y funcionando correctamente. Estas instrucciones cubren la configuración de Kafka y la ejecución de la aplicación.
