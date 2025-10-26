@@ -1,0 +1,233 @@
+Universidad Nacional Abierta y a Distancia
+Vicerrectoría Académica y de Investigación
+Curso: Big Data
+Código: 202016911
+Guía de aprendizaje– Tarea 3 - Procesamiento de Datos con Apache
+Spark
+1. Datos de la Taller
+Tabla 1. Tabla de descripción
+Aspecto Descripción
+1. Tipo de actividad Colaborativa
+2. Momento de la evaluación Intermedio
+3. Unidad gestora Escuela de Ciencias Básicas
+Tecnología e Ingeniería ECBTI
+4. Puntaje de la/el Elija un 115 puntos
+elemento.
+5. La actividad inicia el: martes, 30 de septiembre de
+2025
+6. La actividad finaliza el: martes, 28 de octubre de 2025
+7. Horas de trabajo 24 horas
+independiente del
+estudiante
+2. Descripción detallada de la actividad de aprendizaje
+Con el desarrollo de esta actividad se espera que se alcance el siguiente
+resultado de aprendizaje:
+• Resultado de aprendizaje 2: Diseñar e implementar soluciones de
+almacenamiento y procesamiento de grandes volúmenes de datos
+utilizando herramientas como Hadoop, Spark y Kafka, para
+desarrollar infraestructuras tecnológicas que soporten el análisis
+eficiente de datos.
+La actividad consiste en:
+1. Investigación:
+1
+• Elaborar una tabla comparativa que resalte las diferencias clave
+entre Hadoop y Spark en términos de arquitectura,
+procesamiento, rendimiento y casos de uso
+• Definir los conceptos de RDD. Propiedades de los RDDs:
+Inmutabilidad, particionamiento. Tipos de Operaciones:
+o Transformaciones: map, filter, flatMap, groupByKey,
+reduceByKey.
+o Acciones: collect, count, take, reduce.
+• Concepto de DataFrame. Diferencias y ventajas sobre los RDDs.
+• Crear un diagrama que ilustre la arquitectura de Kafka y
+explicar los conceptos clave como topics, partitions, brokers,
+producers y consumers.
+2. Definición del problema y conjunto de datos: Cada estudiante
+deberá seleccionar un problema que pueda ser resuelto mediante
+el análisis de un conjunto de datos de gran volumen.
+• El conjunto de datos puede ser propio o provenir de alguna
+fuente pública (Kaggle, UCI Machine Learning Repository, datos
+abiertos de Colombia, etc.).
+3. Implementación en Spark: Desarrollar una aplicación
+implementado Spark (utilizando Python) que realicen las
+siguientes tareas:
+• Procesamiento en batch:
+o Cargar el conjunto de datos seleccionado desde la fuente
+original.
+o Realizar operaciones de limpieza, transformación y
+análisis exploratorio de datos (EDA) utilizando RDDs o
+DataFrames.
+o Almacenar los resultados procesados.
+• Procesamiento en tiempo real (Spark Streaming &
+Kafka):
+o Configurar un topic en Kafka para simular la llegada de
+datos en tiempo real (usar un generador de datos).
+o Implementar una aplicación Spark Streaming que
+consuma datos del topic de Kafka.
+2
+o Realizar algún tipo de procesamiento o análisis sobre los
+datos en tiempo real (contar eventos, calcular
+estadísticas, etc.).
+o Visualizar los resultados del procesamiento en tiempo
+real.
+Para el desarrollo de este componente practico deberá acceder al
+siguiente documento:
+• Anexo 3. Instructivo Spark Streaming y Kafka. Este
+documento contiene el paso a paso de como instalar y
+configurar Apache Streaming y Kafka para el posterior
+procesamiento de datos.
+4. Documentación y presentación:
+• Foro de discusión: Compartir los avances del proyecto y
+socializar el conjunto de datos seleccionado, problemas
+encontrados y soluciones implementadas.
+• Repositorio de código: Cada estudiante debe publicar el
+código fuente del proyecto en un repositorio Git (GitHub,
+GitLab, etc.) con una descripción clara de la solución y las
+instrucciones para su ejecución.
+• Video Explicativo: Cada estudiante debe crear un video de
+máximo 5 minutos donde explique claramente el código
+desarrollado.
+• Presentación online: Cada estudiante deberá elaborar una
+presentación que incluya:
+o Introducción al problema y explicación del conjunto de
+datos seleccionado.
+o Arquitectura de la solución en Spark.
+o Enlace del código publicado (GitHub, GitLab, etc)
+o Enlace del video explicativo del código desarrollado.
+o Capturas de Pantalla de la visualización de los resultados
+obtenidos con sus respectivos análisis (Máximo 5
+capturas).
+• Informe escrito (Tarea3_grupo.pdf): El documento debe
+contener:
+o Portada
+o Introducción
+o Objetivo General
+o Objetivos Específicos
+3
+o Respuesta a las actividades de investigación.
+o Enlaces de las presentaciones online
+o 5 conclusiones generales del grupo.
+o Referencias Bibliográficas
+Para el desarrollo de esta actividad se requieren los siguientes
+materiales y recursos:
+• Sebastián Maldonado, C. V. (2022). Analytics y Big Data. Ciencia
+de los Datos aplicada al mundo de los negocios. (P 185-195). RIL
+editores. https://research-ebsco-
+com.bibliotecavirtual.unad.edu.co/linkprocessor/plink?id=95f345f8
+-e764-3b22-a794-13af16d4c429.
+• Macías, M. & Gómez, M. (2015). Introducción a Apache Spark:
+para empezar a programar el big data. (P 27-40). Editorial UOC.
+https://elibro-
+net.bibliotecavirtual.unad.edu.co/es/ereader/unad/58454?page=
+29
+• Montoya Suarez, L. & Gil Restrepo, G. A. (2018). Actualidad e
+importancia de la implementación de Big Data utilizando las
+herramientas Hadoop y Spark . https://elibro-
+net.bibliotecavirtual.unad.edu.co/es/ereader/unad/126993?page
+=1.
+• Velázquez Esquivel, C. I., Ruiz Ayala, J., García Muñoz, L. H., &
+García Villareal, L. J. (2017). Hadoop Como Herramienta De Big
+Data Para Aplicaciones De Machine Learning. Congreso
+Internacional de Investigacion Academia Journals.
+https://research-ebsco-
+com.bibliotecavirtual.unad.edu.co/linkprocessor/plink?id=45acdb7
+7-0fab-3f1f-81b5-f1b9cb23679c.
+• Gélvez García, N. Y., Díaz, R. P., & Vera, N. E. (2012). Hadoop
+descripción e instalación en distribuciones Linux. Revista Entérese
+Boletín Científico Universitario. https://research-ebsco-c
+om.bibliotecavirtual.unad.edu.co/linkprocessor/plink?id=052175d1
+-0408-33db-9940-8da4a4a6bcf0
+• Jaramillo, M. L. - (2024). El big data y sus aplicaciones
+[Objeto_virtual_de_Aprendizaje_OVA]. Repositorio Institucional
+UNAD.
+https://repository.unad.edu.co/handle/10596/63442.
+4
+Para el desarrollo de esta actividad debe seguir los siguientes pasos:
+Paso 1: En el entorno de Información inicial debe:
+Revisar la agenda del curso y ajustar sus actividades para realizar la
+entrega del producto final de acuerdo con la fecha establecida.
+Paso 2: En el entorno de Aprendizaje debe:
+• Realizar las lecturas recomendadas para cada tema y participar
+activamente en las actividades propuestas.
+• Participar en el foro de la tarea 3 – Procesamiento de Datos con
+Apache Spark, publicando los avances del proyecto y socializar el
+conjunto de datos seleccionado, problemas encontrados,
+soluciones implementadas y la presentación online. Respuesta a
+las actividades de investigación.
+• Revisar el trabajo final para que esté en conformidad con lo
+solicitado en la guía.
+Paso 3: En el entorno de Evaluación debe:
+• Realizar la entrega del documento final en formato PDF.
+3. Indicaciones para el desarrollo y entrega de las evidencias de
+aprendizaje.
+Las evidencias de aprendizaje son las acciones, productos o procesos
+observables que se realizan y/o entregan para manifestar las
+capacidades, habilidades, aptitudes y actitudes adquiridas, y que, a su
+vez, servirán al docente para verificar y evaluar su desempeño.
+Las evidencias para desarrollar independientemente son:
+• Participación en el foro: Realizar mínimo 2 aportes de calidad,
+mostrando un análisis profundo del tema
+5
+• Selección de Conjunto de Datos: Cada estudiante deberá
+seleccionar un conjunto de datos
+• Desarrollo de código: Implementar al menos una parte específica
+del proyecto (ej: procesamiento en batch o en tiempo real).
+• Pruebas y depuración: Asegurar la funcionalidad del código
+desarrollado
+• Video Demostración: Creación de un video donde explique el
+código desarrollado.
+Las evidencias para desarrollar colaborativamente son:
+• Entrega del documento final en formato PDF
+(Tarea3_grupo.pdf): Un solo documento por grupo con la
+información completa. El documento debe contener:
+o Portada
+o Introducción
+o Objetivo General
+o Objetivos Específicos
+o Respuesta a las actividades de investigación
+o Enlaces de las presentaciones online.
+o 5 conclusiones generales del grupo.
+o Referencias Bibliográficas
+Para su desarrollo y entrega tenga en cuenta las siguientes
+orientaciones:
+1. Todos los integrantes del grupo deben participar con sus aportes en
+el desarrollo de la actividad.
+2. En cada grupo deben elegir un solo integrante que se encargará de
+entregar el producto solicitado en el entorno que haya señalado el
+docente.
+3. Antes de entregar el producto solicitado deben revisar que cumpla
+con todos los requerimientos que se señalaron en esta guía de
+actividades.
+6
+4. Solo se deben incluir como autores del producto entregado, a los
+integrantes del grupo que hayan participado con aportes durante el
+tiempo destinado para la actividad.
+Tenga en cuenta que todos los productos escritos independientes o
+grupales deben cumplir con las normas de ortografía y con las condiciones
+de presentación que se hayan definido.
+En cuanto al uso de referencias considere que el producto de esta
+actividad debe cumplir con las normas APA
+En cualquier caso, cumpla con las normas de referenciación y evite el
+plagio académico, para ello puede apoyarse revisando sus productos
+escritos mediante la herramienta Turnitin que encuentra en el campus
+virtual.
+4. Situaciones de orden académico
+Considere que en el acuerdo 029 del 13 de diciembre de 2013, artículo
+99, se considera como faltas que atentan contra el orden académico,
+entre otras, las siguientes: literal e) “El plagiar, es decir, presentar como
+de su propia autoría la totalidad o parte de una obra, trabajo, documento
+o invención realizado por otra persona. Implica también el uso de citas o
+referencias faltas, o proponer citad donde no haya coincidencia entre ella
+y la referencia” y liberal f) “El reproducir, o copiar con fines de lucro,
+materiales educativos o resultados de productos de investigación, que
+cuentan con derechos intelectuales reservados para la Universidad”
+Las sanciones académicas a las que se enfrentará el estudiante son las
+siguientes:
+a) En los casos de fraude académico demostrado en el trabajo académico
+o evaluación respectiva, la calificación que se impondrá será de cero
+puntos sin perjuicio de la sanción disciplinaria correspondiente.
+b) En los casos relacionados con plagio demostrado en el trabajo
+académico cualquiera sea su naturaleza, la calificación que se impondrá
+será de cero puntos, sin perjuicio de la sanción disciplinaria
+correspondiente.
+7
