@@ -40,10 +40,12 @@ El proyecto utiliza un dataset sintético de transacciones de e-commerce que inc
 
 ### En la Máquina Virtual (Ubuntu con Hadoop/Spark)
 
-- Apache Spark 3.5.3
-- Apache Kafka 3.6.2
-- Python 3.x
-- Java 8 o superior
+**Nota Importante**: Este proyecto asume que ya tienes un servidor Hadoop preconfigurado y funcionando en la máquina virtual con los siguientes componentes instalados:
+
+- Apache Spark 3.5.3 (preinstalado y configurado)
+- Python 3.x (preinstalado)
+- Java 8 o superior (preinstalado)
+- Apache Kafka 3.6.2 (se instalará durante el proceso)
 
 ### Dependencias Python
 
@@ -52,6 +54,8 @@ pip install -r requirements.txt
 ```
 
 ## Instrucciones de Instalación
+
+**Nota**: El servidor Hadoop y Spark ya deben estar preconfigurados y funcionando correctamente. Estas instrucciones cubren la configuración de Kafka y la ejecución de la aplicación.
 
 ### 1. Configuración de Kafka (en la VM)
 
