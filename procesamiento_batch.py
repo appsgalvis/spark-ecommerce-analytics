@@ -71,10 +71,10 @@ def limpiar_datos(df):
     
     # Eliminar registros con valores nulos críticos
     df_limpio = df.filter(
-        col("transaction_id").isNotNull() &
-        col("customer_id").isNotNull() &
-        col("total").isNotNull() &
-        col("total") > 0
+        (col("transaction_id").isNotNull()) &
+        (col("customer_id").isNotNull()) &
+        (col("total").isNotNull()) &
+        (col("total") > 0)
     )
     
     print(f"Registros después de limpieza: {df_limpio.count()}")
