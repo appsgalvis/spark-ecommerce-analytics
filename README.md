@@ -158,51 +158,78 @@ spark-ecommerce-analytics/
 
 ## Capturas de Pantalla del Proceso
 
-### 1. Configuración del Entorno
+**Nota**: Las capturas de pantalla están organizadas por carpeta `imagenes/` e integradas en las secciones de instalación y ejecución arriba.
 
 #### Actualización del Sistema
-![Actualización del Sistema](Toma%20captura%20de%20la%20actualizaci%C3%B3n%20del%20sistema.png)
+![Actualización del Sistema](imagenes/Toma%20captura%20de%20la%20actualizaci%C3%B3n%20del%20sistema.png)
 
 #### Versiones de Python y pip
-![Versiones de Python y pip](Captura%20las%20versiones%20de%20Python%20y%20pip.png)
+![Versiones de Python y pip](imagenes/Captura%20las%20versiones%20de%20Python%20y%20pip.png)
 
 #### Clonación del Repositorio
-![Clonación del Repositorio](Toma%20captura%20de%20la%20clonaci%C3%B3n%20exitosa%20del%20repositorio.png)
+![Clonación del Repositorio](imagenes/Toma%20captura%20de%20la%20clonaci%C3%B3n%20exitosa%20del%20repositorio.png)
 
 ### 2. Instalación de Dependencias
 
 #### Instalación de Dependencias Python
-![Instalación de Dependencias](Captura%20la%20instalaci%C3%B3n%20exitosa%20de%20las%20dependencias%20Python.png)
+![Instalación de Dependencias](imagenes/Captura%20la%20instalaci%C3%B3n%20exitosa%20de%20las%20dependencias%20Python.png)
 
 #### Verificación de Librerías
-![Verificación de Librerías](Captura%20la%20verificaci%C3%B3n%20de%20las%20librer%C3%ADas%20instaladas.png)
+![Verificación de Librerías](imagenes/Captura%20la%20verificaci%C3%B3n%20de%20las%20librer%C3%ADas%20instaladas.png)
 
 ### 3. Configuración de Servicios
 
 #### Servicios Hadoop (jps)
-![Servicios Hadoop](Captura%20la%20salida%20de%20jps%20mostrando%20los%20servicios%20de%20Hadoop.png)
+![Servicios Hadoop](imagenes/Captura%20la%20salida%20de%20jps%20mostrando%20los%20servicios%20de%20Hadoop.png)
 
 #### Versión de Spark
-![Versión de Spark](Captura%20la%20versi%C3%B3n%20de%20Spark%20instalada.png)
+![Versión de Spark](imagenes/Captura%20la%20versi%C3%B3n%20de%20Spark%20instalada.png)
 
 #### Dataset CSV Verificado
-![Dataset CSV](Captura%20la%20verificaci%C3%B3n%20del%20dataset%20CSV.png)
+![Dataset CSV](imagenes/Captura%20la%20verificaci%C3%B3n%20del%20dataset%20CSV.png)
 
 ### 4. Configuración de Kafka
 
 #### Descarga y Configuración de Kafka
-![Descarga de Kafka](Captura%20la%20descarga%20%2C%20descompresi%C3%B3n%20y%20configuraci%C3%B3n%20de%20Kafka..png)
+![Descarga de Kafka](imagenes/Captura%20la%20descarga%20%2C%20descompresi%C3%B3n%20y%20configuraci%C3%B3n%20de%20Kafka..png)
 
 #### Inicio de Kafka
-![Inicio de Kafka](Captura%20el%20inicio%20de%20Kafka.png)
+![Inicio de Kafka](imagenes/Captura%20el%20inicio%20de%20Kafka.png)
 
 #### Creación del Topic
-![Creación del Topic](Captura%20la%20creaci%C3%B3n%20exitosa%20del%20topic.png)
+![Creación del Topic](imagenes/Captura%20la%20creaci%C3%B3n%20exitosa%20del%20topic.png)
 
-### 5. Estructura del Proyecto
+### 5. Procesamiento Batch
+
+#### Ejecución del Procesamiento Batch
+![Ejecución Batch a](imagenes/Captura%20la%20ejecuci%C3%B3n%20del%20procesamiento%20batch%20y%20los%20resultados%20del%20an%C3%A1lisis%20exploratorio%20a.png)
+
+![Ejecución Batch b](imagenes/Captura%20la%20ejecuci%C3%B3n%20del%20procesamiento%20batch%20y%20los%20resultados%20del%20an%C3%A1lisis%20exploratorio%20b.png)
+
+![Ejecución Batch c](imagenes/Captura%20la%20ejecuci%C3%B3n%20del%20procesamiento%20batch%20y%20los%20resultados%20del%20an%C3%A1lisis%20exploratorio%20c.png)
+
+![Ejecución Batch d](imagenes/Captura%20la%20ejecuci%C3%B3n%20del%20procesamiento%20batch%20y%20los%20resultados%20del%20an%C3%A1lisis%20exploratorio%20d.png)
+
+#### Archivos Parquet Generados
+![Archivos Parquet](imagenes/Captura%20los%20archivos%20Parquet%20generado.png)
+
+### 6. Spark Streaming en Tiempo Real
+
+#### Productor Kafka
+![Productor Kafka](imagenes/Captura%20el%20productor%20enviando%20transacciones.png)
+
+#### Consumidor Spark Streaming
+![Consumidor Streaming](imagenes/Captura%20el%20consumidor%20procesando%20datos%20en%20tiempo%20real.png)
+
+#### Interfaz Web de Spark
+![Spark UI Jobs](imagenes/Captura%20la%20interfaz%20web%20de%20Spark%20mostrando%20jobs..png)
+
+![Spark UI Streaming](imagenes/Captura%20la%20interfaz%20web%20de%20Spark%20mostrando%20StreamingQuery.png)
+
+### 7. Estructura del Proyecto
 
 #### Estructura de Directorios
-![Estructura de Directorios](Captura%20la%20estructura%20de%20directorios%20creada.png)
+![Estructura de Directorios](imagenes/Captura%20la%20estructura%20de%20directorios%20creada.png)
 
 ## Monitoreo y Visualización
 
