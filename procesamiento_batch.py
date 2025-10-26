@@ -70,12 +70,10 @@ def limpiar_datos(df):
     df.select([count(when(col(c).isNull(), c)).alias(c) for c in df.columns]).show()
     
     # Eliminar registros con valores nulos críticos
-    df_limpio = df.filter(
-        (col("transaction_id").isNotNull()) &
-        (col("customer_id").isNotNull()) &
-        (col("total").isNotNull()) &
-        (col("total") > 0)
-    )
+    df_limpio = df.filter(col("transaction_id").isNotNull())
+    df_limpio = df_limpio.filter(col("customer_id").isNotNull())
+    df_limpio = df_limpio.filter(col("total").isNotNull())
+    df_limpio = df_limpio.filter(col("total") > 0)
     
     print(f"Registros después de limpieza: {df_limpio.count()}")
     
