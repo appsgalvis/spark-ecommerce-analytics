@@ -106,6 +106,20 @@ cd spark-ecommerce-analytics
 
 ![Clonación del Repositorio](imagenes/Toma%20captura%20de%20la%20clonaci%C3%B3n%20exitosa%20del%20repositorio.png)
 
+### 3.1. Transferir Dataset al Servidor
+
+**Opción A: Desde Windows (usando SCP)**
+```bash
+# Desde PowerShell en Windows, transferir el dataset al servidor
+scp datos/transacciones_ventas.csv vboxuser@192.168.0.4:~/spark-ecommerce-analytics/datos/
+```
+
+**Opción B: Generar el dataset directamente en el servidor**
+```bash
+# En el servidor Hadoop, ejecutar el generador
+python3 generar_dataset_ventas.py
+```
+
 ### 4. Instalación de Dependencias
 
 ```bash
@@ -795,7 +809,7 @@ tree spark-ecommerce-analytics/
 ```
 spark-ecommerce-analytics/
 ├── datos/
-│   └── transacciones_ventas.csv          # Dataset generado
+│   └── transacciones_ventas.csv          # Dataset generado (se sube al servidor)
 ├── resultados/                            # Resultados del procesamiento batch
 │   ├── transacciones_limpias.parquet
 │   ├── transacciones_con_fecha.parquet
