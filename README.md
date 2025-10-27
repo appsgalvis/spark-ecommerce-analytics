@@ -130,17 +130,12 @@ pip3 install -r requirements.txt
 ![Instalación de Dependencias](imagenes/Captura%20la%20instalaci%C3%B3n%20exitosa%20de%20las%20dependencias%20Python.png)
 
 ```bash
-# Verificar librerías instaladas
-pip3 list | grep -E "(pyspark|kafka|pandas|numpy)"
-```
-
-![Verificación de Librerías](imagenes/Captura%20la%20verificaci%C3%B3n%20de%20las%20librer%C3%ADas%20instaladas.png)
-
-```bash
 # Verificar importación de librerías
 python3 -c "import kafka; print('Kafka instalado correctamente')"
 python3 -c "import pandas; print('Pandas instalado correctamente')"
 ```
+
+![Verificación de Librerías](imagenes/Captura%20la%20verificaci%C3%B3n%20de%20las%20librer%C3%ADas%20instaladas.png)
 
 ### 5. Verificación de Servicios Hadoop
 
