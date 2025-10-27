@@ -122,6 +122,12 @@ pip3 list | grep -E "(pyspark|kafka|pandas|numpy)"
 
 ![Verificación de Librerías](imagenes/Captura%20la%20verificaci%C3%B3n%20de%20las%20librer%C3%ADas%20instaladas.png)
 
+```bash
+# Verificar importación de librerías
+python3 -c "import kafka; print('Kafka instalado correctamente')"
+python3 -c "import pandas; print('Pandas instalado correctamente')"
+```
+
 ### 5. Verificación de Servicios Hadoop
 
 ```bash
