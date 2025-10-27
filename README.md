@@ -284,26 +284,6 @@ Los resultados se muestran en tiempo real en la consola con:
 - Monitoreo de patrones de venta en tiempo real
 - Detección de tendencias por categoría
 
-## Solución de Problemas
-
-### Error de Conexión a Kafka
-```bash
-# Verificar que Kafka esté ejecutándose
-sudo /opt/Kafka/bin/kafka-topics.sh --list --bootstrap-server localhost:9092
-```
-
-### Error de Memoria en Spark
-```bash
-# Ajustar memoria en spark-submit
-spark-submit --driver-memory 2g --executor-memory 2g procesamiento_batch.py
-```
-
-### Puerto 4040 Ocupado
-```bash
-# Cambiar puerto de la interfaz web
-spark-submit --conf spark.ui.port=4041 procesamiento_batch.py
-```
-
 ## Estado del Proyecto
 
 ### ✅ Completado
