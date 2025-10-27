@@ -904,7 +904,7 @@ Los resultados se muestran en tiempo real en la consola con:
 
 ## Autor
 
-**appsgalvis** - Estudiante de Ingeniería de Sistemas UNAD
+**Cristian Johan Galvis Bernal** - Estudiante de Ingeniería de Sistemas UNAD
 Curso: Big Data (202016911)
 Tarea 3: Procesamiento de Datos con Apache Spark
 
