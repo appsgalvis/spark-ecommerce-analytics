@@ -4,49 +4,54 @@
 
 ### Prerrequisitos
 
-1. **Conexión SSH a la VM**
-   - IP: `192.168.0.x` (verificar IP actual)
-   - Usuario: `vboxuser`
-   - Contraseña: `bigdata`
+Este proyecto asume que ya tienes un servidor Hadoop preconfigurado y funcionando en la máquina virtual con los siguientes componentes instalados:
+- Apache Spark 3.5.3 (preinstalado y configurado)
+- Python 3.x (preinstalado)
+- Java 8 o superior (preinstalado)
 
-2. **Verificar Servicios**
-   ```bash
-   # Verificar que Hadoop esté ejecutándose
-   jps
-   
-   # Verificar que Spark esté disponible
-   spark-shell --version
-   ```
+### Conexión al Servidor
+
+**Desde Windows:**
+```bash
+ssh vboxuser@192.168.0.4
+```
+
+**Nota**: Reemplaza `192.168.0.4` con la IP de tu servidor Hadoop si es diferente.
 
 ### Paso 1: Preparar el Entorno
 
 ```bash
 # Conectarse por SSH
-ssh vboxuser@192.168.0.x
+ssh vboxuser@192.168.0.4
 
-# Crear directorio del proyecto
-mkdir -p ~/spark-ecommerce-analytics
-cd ~/spark-ecommerce-analytics
+# Clonar el repositorio
+git clone https://github.com/appsgalvis/spark-ecommerce-analytics.git
+cd spark-ecommerce-analytics
 
-# Crear estructura de directorios
-mkdir -p datos batch streaming resultados
+# Instalar dependencias Python
+pip3 install -r requirements.txt
 ```
 
-### Paso 2: Instalar Dependencias
+### Paso 2: Verificar Servicios Hadoop
 
 ```bash
-# Instalar kafka-python
-pip install kafka-python
+# Verificar servicios Hadoop ejecutándose
+jps
 
-# Verificar instalación
+# Verificar versión de Spark
+spark-shell --version
+
+# Verificar importación de librerías
 python3 -c "import kafka; print('Kafka instalado correctamente')"
 ```
 
 ### Paso 3: Configurar Kafka
 
 ```bash
-# Descargar Kafka (si no está instalado)
-wget https://downloads.apache.org/kafka/3.6.2/kafka_2.13-3.6.2.tgz
+# Descargar Kafka desde Apache Archive
+wget https://archive.apache.org/dist/kafka/3.6.2/kafka_2.13-3.6.2.tgz
+
+# Descomprimir y mover
 tar -xzf kafka_2.13-3.6.2.tgz
 sudo mv kafka_2.13-3.6.2 /opt/Kafka
 
@@ -67,38 +72,25 @@ sudo /opt/Kafka/bin/kafka-server-start.sh /opt/Kafka/config/server.properties &
 /opt/Kafka/bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 ```
 
-### Paso 4: Subir Archivos del Proyecto
+### Paso 4: Transferir Dataset o Generarlo en el Servidor
 
-**Opción A: Usando SCP (desde Windows)**
+**Opción A: Transferir Dataset desde Windows**
 ```bash
 # Desde PowerShell en Windows
-scp generar_dataset_ventas.py vboxuser@192.168.0.x:~/spark-ecommerce-analytics/
-scp procesamiento_batch.py vboxuser@192.168.0.x:~/spark-ecommerce-analytics/batch/
-scp kafka_productor_ventas.py vboxuser@192.168.0.x:~/spark-ecommerce-analytics/streaming/
-scp spark_streaming_consumidor.py vboxuser@192.168.0.x:~/spark-ecommerce-analytics/streaming/
-scp requirements.txt vboxuser@192.168.0.x:~/spark-ecommerce-analytics/
+scp datos/transacciones_ventas.csv vboxuser@192.168.0.4:~/spark-ecommerce-analytics/datos/
 ```
 
-**Opción B: Crear archivos directamente en la VM**
+**Opción B: Generar el dataset directamente en el servidor**
 ```bash
-# Usar nano para crear cada archivo
-nano generar_dataset_ventas.py
-# Copiar y pegar el contenido del archivo
-# Ctrl+O para guardar, Enter, Ctrl+X para salir
-```
-
-### Paso 5: Generar Dataset
-
-```bash
-# Ejecutar generador de dataset
+# En el servidor Hadoop
 python3 generar_dataset_ventas.py
 
 # Verificar que se creó el archivo
 ls -la datos/
-head datos/transacciones_ventas.csv
+head -5 datos/transacciones_ventas.csv
 ```
 
-### Paso 6: Ejecutar Procesamiento Batch
+### Paso 5: Procesamiento Batch
 
 ```bash
 # Ejecutar análisis batch
@@ -108,47 +100,33 @@ spark-submit procesamiento_batch.py
 ls -la resultados/
 ```
 
-### Paso 7: Ejecutar Streaming en Tiempo Real
+### Paso 6: Streaming en Tiempo Real
 
 **Terminal 1 - Productor Kafka:**
 ```bash
-cd ~/spark-ecommerce-analytics/streaming
 python3 kafka_productor_ventas.py
 ```
 
 **Terminal 2 - Consumidor Spark Streaming:**
 ```bash
-cd ~/spark-ecommerce-analytics/streaming
 spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.3 spark_streaming_consumidor.py
 ```
 
-### Paso 8: Monitoreo
+### Paso 7: Monitoreo
 
-1. **Interfaz Web de Spark**
-   - Abrir navegador: `http://192.168.0.x:4040`
-   - Ver jobs ejecutándose
-   - Monitorear métricas
+**Interfaz Web de Spark**
+- Abrir navegador: `http://192.168.0.4:4040`
+- Ver jobs ejecutándose
+- Monitorear métricas
 
-2. **Verificar Kafka**
-   ```bash
-   # Ver mensajes en el topic
-   /opt/Kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic transacciones_ventas --from-beginning
-   ```
+### Paso 8: Descargar Resultados (Opcional)
 
-### Paso 9: Capturar Resultados
+```bash
+# Desde Windows, descargar los resultados del servidor
+scp -r vboxuser@192.168.0.4:~/spark-ecommerce-analytics/resultados/ ./resultados/
+```
 
-1. **Capturas de Pantalla Necesarias:**
-   - Ejecución del procesamiento batch
-   - Resultados del análisis exploratorio
-   - Kafka producer generando datos
-   - Spark Streaming procesando en tiempo real
-   - Interfaz web de Spark (puerto 4040)
-
-2. **Archivos de Resultado:**
-   ```bash
-   # Copiar resultados para análisis
-   cp resultados/* ~/capturas_resultados/
-   ```
+**Nota**: Los archivos de resultados se generan automáticamente en el servidor durante el procesamiento batch y permanecen allí para análisis posterior.
 
 ### Solución de Problemas Comunes
 
@@ -216,6 +194,7 @@ Antes de finalizar, verificar que:
 
 ---
 
-**Autor**: appsgalvis  
-**Curso**: Big Data UNAD  
+**Autor**: Cristian Johan Galvis Bernal  
+**Curso**: Big Data UNAD (202016911)  
+**Tarea**: Procesamiento de Datos con Apache Spark  
 **Fecha**: Octubre 2025
