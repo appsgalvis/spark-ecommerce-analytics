@@ -767,6 +767,17 @@ ls -la resultados/
 
 ![Archivos Parquet](imagenes/Captura%20los%20archivos%20Parquet%20generado.png)
 
+### 8.1. Descargar Resultados del Servidor (Opcional)
+
+**Para descargar los archivos Parquet generados desde el servidor:**
+
+```bash
+# Desde Windows, descargar los resultados del servidor
+scp -r vboxuser@192.168.0.4:~/spark-ecommerce-analytics/resultados/ ./resultados/
+```
+
+**Nota**: Los archivos de resultados se generan automáticamente en el servidor durante el procesamiento batch y permanecen allí para análisis posterior.
+
 ### 9. Streaming en Tiempo Real
 
 #### Terminal 1 - Productor Kafka:
@@ -809,8 +820,8 @@ tree spark-ecommerce-analytics/
 ```
 spark-ecommerce-analytics/
 ├── datos/
-│   └── transacciones_ventas.csv          # Dataset generado (se sube al servidor)
-├── resultados/                            # Resultados del procesamiento batch
+│   └── transacciones_ventas.csv          # Dataset de entrada
+├── resultados/                            # Resultados del procesamiento batch (generados en el servidor)
 │   ├── transacciones_limpias.parquet
 │   ├── transacciones_con_fecha.parquet
 │   └── ventas_por_categoria.parquet
